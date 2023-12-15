@@ -3,37 +3,27 @@
 \section{Introductie}%
 \label{sec:introductie}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
+AllPhi is een technologiebedrijf dat elk jaar aanwezig is op een aantal technologiebeurzen. Op deze beurzen organiseert AllPhi een interactieve challenge voor bezoekers. De winnaar van de challenge ontvangt een leuke prijs.
 
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
+Voor de meest recente editie van de challenge ontwikkelde AllPhi een eigen Snake-spel. Dit spel was ontwikkeld met behulp van C\# en .NET. Hoewel AllPhi geen professionele gameontwikkelaars zijn, waren ze tevreden met het resultaat.
 
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
+Om in de toekomst nog betere challenges te kunnen ontwikkelen, wil AllPhi onderzoeken welke game engine het makkelijkst te gebruiken is voor mensen met een achtergrond in C\# en .NET, maar geen game development achtergrond hebben.
 
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}%
 \label{sec:state-of-the-art}
+\subsection{Game engines}
+Game engines zijn een cruciaal element in de game development wereld. Deze vergemakkelijken het ontwikkelen van videospellen. Ze bieden varierende tools aan om dit te bereiken. Van animaties tot gebruikers interacties tot detectie van botsingen. Volgens \textcite{Barczak2021} is een game engine een software toolkit die productie van games op verschillende platformen vereenvoudigt.
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+\subsection{Unity}
+Unity is een commerciële game engine die een breed scala aan features biedt, waaronder ondersteuning voor 2D- en 3D-graphics, fysica, geluid, netwerken en augmented reality.\autocite{Haas2014} Unity is echter ook duurder en heeft een hogere leercurve dan Godot.
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+\subsection{Godot}
+Godot onderscheidt zich als een volledig uitgeruste, moderne game engine die een unieke combinatie van toegankelijkheid en flexibiliteit biedt. Als een gratis en open-source platform, biedt Godot een hoger niveau van transparantie in vergelijking met commerciële alternatieven zoals Unity. Deze openheid zorgt ervoor dat er geen functionaliteiten verborgen zijn achter een betaalmuur, wat een belangrijk voordeel is voor ontwikkelaars die met budgetbeperkingen werken.\autocite{Bradfield2018}
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+Godot's open-source karakter zorgt ook voor een actieve en ondersteunende gemeenschap. Deze gemeenschap speelt een cruciale rol bij het voortdurend verbeteren van de engine, het bijdragen aan documentatie, en het delen van kennis, wat van onschatbare waarde is voor zowel nieuwe als ervaren gebruikers.
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -42,31 +32,43 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
-
 %---------- Methodologie ------------------------------------------------------
-\section{Methodologie}%
+\section{Methodologie}
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+Deze studie gebruikt een vergelijkende benadering om twee identieke 2D-platformspellen te ontwikkelen, elk met behulp van een andere game engine: Godot en Unity. Het primaire doel is het onderzoeken van een scala aan variabelen, waaronder gebruiksgemak, leercurve voor beginners, technologische integratie, tijd benodigd voor implementatie, en de totale gebruikerservaring. Hieronder volgt een gedetailleerd overzicht van de geplande functionaliteiten van de spellen en de evaluatiecriteria.
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+In de eerste fase worden beide game engines geïnstalleerd, waarvoor een periode van één week is gereserveerd. Voor de implementatie van elke functionaliteit wordt vervolgens 1 tot 2 weken uitgetrokken. Dit tijdsbestek zorgt ervoor dat er voldoende ruimte is om elke functie in beide engines te implementeren en de resultaten grondig te analyseren.
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+\subsection{Functionaliteiten voor de Proof-of-Concept Spellen}
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+De proof-of-concept spellen zullen worden voorzien van diverse essentiële kenmerken om een representatieve vergelijking tussen Godot en Unity mogelijk te maken. Deze kenmerken omvatten:
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+\begin{itemize}
+    \item \textbf{Beweging:} Het karakter kan bewegen naar links en rechts met behulp van de pijltoetsen of WASD-toetsen.
+    \item \textbf{Wereld:} Het eerste level vindt plaats in een 2D-wereld met blokken en andere objecten.
+    \item \textbf{Springen en Duiken:} Het karakter kan acties uitvoeren zoals springen en duiken.
+    \item \textbf{Interactie met Blokken:} Het karakter kan interageren met omgevingsblokken, bijvoorbeeld klimmen, verplaatsen of vernietigen.
+    \item \textbf{Interactie met Vijanden:} Het karakter kan vijanden verslaan of ontwijken.
+    \item \textbf{Scoresysteem:} Een systeem dat scores berekent op basis van verslagen vijanden en verzamelde blokken.
+    \item \textbf{Levelselectie:} Een menu om verschillende speellevels te selecteren.
+    \item \textbf{Moeilijkheidsgraden:} Verschillende moeilijkheidsniveaus aangepast aan de vaardigheden van de speler.
+\end{itemize}
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+Elke functionaliteit wordt afwisselend eerst in één van de twee engines geïmplementeerd. Na implementatie in beide engines worden de volgende criteria geëvalueerd:
+\begin{itemize}
+    \item \textbf{Implementatietijd:} De tijd benodigd voor de implementatie van elke functionaliteit.
+    \item \textbf{Leerdurve:} De moeilijkheidsgraad bij het implementeren van de functionaliteit.
+    \item \textbf{Gebruikerstests:} Deze worden uitgevoerd om de gebruikerservaring van beide game engines te evalueren.
+\end{itemize}
+
+Deze methodologische aanpak biedt een gestructureerde en evenwichtige vergelijking van de twee game engines, wat waardevolle inzichten zal leveren voor toekomstige projecten in gameontwikkeling.
+
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
+De gebruikersinterface van Godot onderscheidt zich door haar eenvoud en intuïtieve design, wat in het bijzonder gunstig lijkt voor beginnende ontwikkelaars die zich richten op 2D-platformers. Godot's specialisatie in dit genre belooft een soepelere leercurve. Aan de andere kant staat Unity bekend om zijn robuustheid en uitgebreide bronnen, dankzij een langere aanwezigheid in de industrie. Deze factoren maken Unity een aantrekkelijke optie voor complexere projecten. Echter, voor aspirant-ontwikkelaars zonder eerdere ervaring in game-ontwikkeling lijkt Godot de meer toegankelijke keuze te zijn.
 
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
 
