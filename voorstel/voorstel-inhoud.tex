@@ -3,27 +3,40 @@
 \section{Introductie}%
 \label{sec:introductie}
 
-AllPhi is een technologiebedrijf dat elk jaar aanwezig is op een aantal technologiebeurzen. Op deze beurzen organiseert AllPhi een interactieve challenge voor bezoekers. De winnaar van de challenge ontvangt een leuke prijs.
+AllPhi is een technologiebedrijf dat jaarlijks deelneemt aan verschillende technologiebeurzen, waar het een interactieve uitdaging voor bezoekers organiseert. Voor de meest recente editie van de uitdaging ontwikkelde AllPhi een eigen Snake-spel, gebouwd met behulp van C\# en .NET. Ondanks dat de medewerkers van AllPhi geen professionele gameontwikkelaars zijn, waren ze tevreden met het resultaat.
 
-Voor de meest recente editie van de challenge ontwikkelde AllPhi een eigen Snake-spel. Dit spel was ontwikkeld met behulp van C\# en .NET. Hoewel AllPhi geen professionele gameontwikkelaars zijn, waren ze tevreden met het resultaat.
+Met als doel het verbeteren van toekomstige uitdagingen, wil AllPhi onderzoeken welke game-engine het meest toegankelijk is voor mensen met een achtergrond in C\# en .NET, maar zonder ervaring in game-ontwikkeling.
 
-Om in de toekomst nog betere challenges te kunnen ontwikkelen, wil AllPhi onderzoeken welke game engine het makkelijkst te gebruiken is voor mensen met een achtergrond in C\# en .NET, maar geen game development achtergrond hebben.
+De kern van deze bachelorsproef is het verstrekken van aanbevelingen aan AllPhi met betrekking tot geschikte game-engines voor de ontwikkeling van een `Space Invaders`-achtig spel. Dit wordt bereikt door middel van een grondig onderzoek dat een uitgebreide analyse omvat van beschikbare game-engines die geschikt zijn voor dit specifieke genre.
+
+Het onderzoek zal resulteren in een beknopte lijst van geselecteerde game-engines die als potentieel geschikt worden beschouwd voor het ontwikkelen van een `Space Invaders`-achtig spel. Uit deze lijst zal een game-engine worden gekozen voor de ontwikkeling van een proof-of-concept. Dit proof-of-concept zal fungeren als praktisch demonstratiemiddel, waardoor AllPhi in staat zal zijn om nieuwe spellen te creëren voor gebruik op verschillende evenementen.
 
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}%
 \label{sec:state-of-the-art}
-\subsection{Game engines}
-Game engines zijn een cruciaal element in de game development wereld. Deze vergemakkelijken het ontwikkelen van videospellen. Ze bieden varierende tools aan om dit te bereiken. Van animaties tot gebruikers interacties tot detectie van botsingen. Volgens \textcite{Barczak2021} is een game engine een software toolkit die productie van games op verschillende platformen vereenvoudigt.
 
-\subsection{Unity}
-Unity is een commerciële game engine die een breed scala aan features biedt, waaronder ondersteuning voor 2D- en 3D-graphics, fysica, geluid, netwerken en augmented reality.\autocite{Haas2014} Unity is echter ook duurder en heeft een hogere leercurve dan Godot.
+Het onderzoek omvat een analyse van verschillende game engines die mogelijk geschikt zijn voor het ontwikkelen van het beoogde `Space Invaders`-type spel. Een beknopt overzicht van de geselecteerde game engines omvat:
 
-\subsection{Godot}
-Godot onderscheidt zich als een volledig uitgeruste, moderne game engine die een unieke combinatie van toegankelijkheid en flexibiliteit biedt. Als een gratis en open-source platform, biedt Godot een hoger niveau van transparantie in vergelijking met commerciële alternatieven zoals Unity. Deze openheid zorgt ervoor dat er geen functionaliteiten verborgen zijn achter een betaalmuur, wat een belangrijk voordeel is voor ontwikkelaars die met budgetbeperkingen werken.\autocite{Bradfield2018}
+GameMaker Studio 2, een engine die geschikt is voor beginners om 2D-games te maken, maakt gebruik van een drag-and-drop interface en vereist geen extra programmeertaal naast C\#. Het gebruikt zijn eigen taal genaamd GameMaker Language (GML) \autocite{cossu2019game}.
 
-Godot's open-source karakter zorgt ook voor een actieve en ondersteunende gemeenschap. Deze gemeenschap speelt een cruciale rol bij het voortdurend verbeteren van de engine, het bijdragen aan documentatie, en het delen van kennis, wat van onschatbare waarde is voor zowel nieuwe als ervaren gebruikers.
+Unity, een commerciële game engine, biedt een breed scala aan functies, waaronder ondersteuning voor zowel 2D- als 3D-graphics, fysica, geluid, netwerken en augmented reality \autocite{Haas2014}.
+
+Godot, een gratis en open-source platform, biedt een combinatie van toegankelijkheid en flexibiliteit, zonder verborgen functionaliteiten achter een betaalmuur. Het heeft ook een actieve en ondersteunende gemeenschap \autocite{Bradfield2018}.
+
+Unreal Engine 4 omvat verschillende componenten zoals sound engines, physics engines, graphics engines, gameplay frameworks en online functionaliteiten. De engine bevat ook de Unreal Editor, waarin spellen worden geprogrammeerd met modules zoals Material en Blueprint \autocite{lee2016learning}.
+
+Buildbox is ontworpen voor het ontwikkelen van 2D-games en maakt het mogelijk om snel spellen te maken en te exporteren naar verschillende platformen, inclusief mobiele telefoons \cite{audronis2016buildbox}.
+
+Construct 3 is een HTML5-gebaseerde 2D-game engine die visueel programmeren ondersteunt en spellen kan exporteren naar Windows, MacOS, Linux en mobiele telefoons \cite{enwiki:1200994136}.
+
+Deze overzicht biedt een eerste inzicht in de diverse opties die beschikbaar zijn voor de ontwikkeling van het gewenste spel, en elk van deze engines zal nader worden geëvalueerd in overeenstemming met de specifieke criteria en behoeften van AllPhi.
+
+
+
+
+
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -36,39 +49,23 @@ Godot's open-source karakter zorgt ook voor een actieve en ondersteunende gemeen
 \section{Methodologie}
 \label{sec:methodologie}
 
-Deze studie gebruikt een vergelijkende benadering om twee identieke 2D-platformspellen te ontwikkelen, elk met behulp van een andere game engine: Godot en Unity. Het primaire doel is het onderzoeken van een scala aan variabelen, waaronder gebruiksgemak, leercurve voor beginners, technologische integratie, tijd benodigd voor implementatie, en de totale gebruikerservaring. Hieronder volgt een gedetailleerd overzicht van de geplande functionaliteiten van de spellen en de evaluatiecriteria.
+Het onderzoek is gestructureerd in drie opeenvolgende fasen, die nauwgezet op elkaar zullen volgen om een grondige en systematische analyse van het spel en zijn vereisten te waarborgen.
 
-In de eerste fase worden beide game engines geïnstalleerd, waarvoor een periode van één week is gereserveerd. Voor de implementatie van elke functionaliteit wordt vervolgens 1 tot 2 weken uitgetrokken. Dit tijdsbestek zorgt ervoor dat er voldoende ruimte is om elke functie in beide engines te implementeren en de resultaten grondig te analyseren.
+In de eerste fase zal uitvoerig informatie worden verzameld om te bepalen welke game-engines voldoen aan een uitgebreide reeks van must-have criteria, zoals bepaald volgens het MoSCoW-principe. Deze criteria zullen in overleg met AllPhi worden vastgesteld, waarbij het streven is om een zo volledig mogelijk begrip te verkrijgen van hun specifieke vereisten en voorkeuren met betrekking tot het spel. Gedurende een geschatte periode van 2 tot 3 weken zal deze fase zich concentreren op het verkennen van verschillende opties.
 
-\subsection{Functionaliteiten voor de Proof-of-Concept Spellen}
+De tweede fase van het onderzoek zal zich richten op het verfijnen van de initiële lijst van game-engines tot een meer beheersbare selectie, waarbij de nadruk ligt op het identificeren van die engines die voldoen aan een groot aantal should- en could-have criteria voor het spel. Deze fase, gepland over een periode van 2 weken, zal een diepere analyse omvatten van de potentieel geschikte opties die voortkomen uit de eerste fase, waarbij aandacht wordt besteed aan aspecten zoals functionaliteit, gebruiksgemak en technische ondersteuning.
 
-De proof-of-concept spellen zullen worden voorzien van diverse essentiële kenmerken om een representatieve vergelijking tussen Godot en Unity mogelijk te maken. Deze kenmerken omvatten:
-
-\begin{itemize}
-    \item \textbf{Beweging:} Het karakter kan bewegen naar links en rechts met behulp van de pijltoetsen of WASD-toetsen.
-    \item \textbf{Wereld:} Het eerste level vindt plaats in een 2D-wereld met blokken en andere objecten.
-    \item \textbf{Springen en Duiken:} Het karakter kan acties uitvoeren zoals springen en duiken.
-    \item \textbf{Interactie met Blokken:} Het karakter kan interageren met omgevingsblokken, bijvoorbeeld klimmen, verplaatsen of vernietigen.
-    \item \textbf{Interactie met Vijanden:} Het karakter kan vijanden verslaan of ontwijken.
-    \item \textbf{Scoresysteem:} Een systeem dat scores berekent op basis van verslagen vijanden en verzamelde blokken.
-    \item \textbf{Levelselectie:} Een menu om verschillende speellevels te selecteren.
-    \item \textbf{Moeilijkheidsgraden:} Verschillende moeilijkheidsniveaus aangepast aan de vaardigheden van de speler.
-\end{itemize}
-
-Elke functionaliteit wordt afwisselend eerst in één van de twee engines geïmplementeerd. Na implementatie in beide engines worden de volgende criteria geëvalueerd:
-\begin{itemize}
-    \item \textbf{Implementatietijd:} De tijd benodigd voor de implementatie van elke functionaliteit.
-    \item \textbf{Leerdurve:} De moeilijkheidsgraad bij het implementeren van de functionaliteit.
-    \item \textbf{Gebruikerstests:} Deze worden uitgevoerd om de gebruikerservaring van beide game engines te evalueren.
-\end{itemize}
-
-Deze methodologische aanpak biedt een gestructureerde en evenwichtige vergelijking van de twee game engines, wat waardevolle inzichten zal leveren voor toekomstige projecten in gameontwikkeling.
+Ten slotte zal de derde fase van het onderzoek zich concentreren op de praktische uitvoering door middel van het ontwikkelen van een proof-of-concept met behulp van een zorgvuldig geselecteerde game-engine uit de kortere lijst. Dit proces zal in nauwe samenwerking met AllPhi worden uitgevoerd om ervoor te zorgen dat het eindproduct volledig voldoet aan hun specifieke behoeften en verwachtingen met betrekking tot het spel. Gezien de complexiteit en de omvang van deze fase wordt een aanzienlijke tijdsperiode van 6 tot 8 weken gereserveerd om een grondige en zorgvuldige ontwikkeling te garanderen.
 
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-De gebruikersinterface van Godot onderscheidt zich door haar eenvoud en intuïtieve design, wat in het bijzonder gunstig lijkt voor beginnende ontwikkelaars die zich richten op 2D-platformers. Godot's specialisatie in dit genre belooft een soepelere leercurve. Aan de andere kant staat Unity bekend om zijn robuustheid en uitgebreide bronnen, dankzij een langere aanwezigheid in de industrie. Deze factoren maken Unity een aantrekkelijke optie voor complexere projecten. Echter, voor aspirant-ontwikkelaars zonder eerdere ervaring in game-ontwikkeling lijkt Godot de meer toegankelijke keuze te zijn.
+In de eerste fase zal een uitgebreide lijst van game-engines worden samengesteld, die voldoen aan de basisvereisten die AllPhi heeft gesteld. Deze lijst zal dienen als een brede selectie van potentiële opties voor toekomstige projecten, waarbij criteria zoals ondersteuning voor C\# en .NET, beschikbaarheid van documentatie en community-ondersteuning, en de mogelijkheid om 2D-games te ontwikkelen worden gehanteerd.
+
+Vervolgens zal de tweede fase zich concentreren op het verfijnen van deze grote lijst tot een kortere selectie van game-engines die voldoen aan een uitgebreidere reeks criteria. Deze criteria zullen niet alleen de basisvereisten omvatten, maar ook meer geavanceerde functies en mogelijkheden die relevant zijn voor het specifieke spel dat AllPhi wil ontwikkelen. Deze verfijnde lijst zal AllPhi in staat stellen om het spel zelf te reproduceren, mochten ze dat willen.
+
+Ten slotte zal de derde fase resulteren in de ontwikkeling van een proof-of-concept met behulp van de gekozen game-engine uit de kortere lijst. Dit proof-of-concept zal dienen als een praktisch demonstratiemiddel om de haalbaarheid en potentie van het spel te tonen, zowel voor interne als externe stakeholders. Het biedt AllPhi de mogelijkheid om het spel te presenteren en te evalueren op evenementen, waardoor ze een tastbare demonstratie hebben van hun game-ontwikkelingscapaciteiten.
 
 
