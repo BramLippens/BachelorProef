@@ -6,13 +6,28 @@
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
+\section{Low Code}
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
+\section{\IfLanguageName{dutch}{Game Engines}{Game Engines}}%
+\label{sec:game-engines}
+De term game engine is opgekomen rond midden 1990. Toen kwam het razend populaire videospel Doom gemaakt door ”id Software”. Doom was een van de spellen die de videospel industrie revolutioneert heeft. Het spel was gesplitst tussen 2 lagen. Hun kern softwarecomponenten zoals het renderen systeem van de drie dimensionale omgeving, de collisiedetectie en het geluidsysteem. De andere laag het design van het spel, de werelden/levels en de spelregels. Hierdoor kon ”id Software” nieuw iteraties van videospelen uitbrengen die er anders uitzagen, nieuwe unieke werelden en nieuwe spel regels zonder al te veel aanpassingen aan de kern componenten aan te brengen. Hieruit is dan term game engine ontstaan. \cite{gregory2018game}
 
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+\subsection{GameMaker studio 2}
+GameMaker Studio 2, een engine die geschikt is voor beginners om 2D-games te maken, maakt gebruik van een drag-and-drop interface en vereist geen extra programmeertaal naast C\#. Het gebruikt zijn eigen taal genaamd GameMaker Language (GML) \autocite{cossu2019game}.
 
-Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
+\subsection{Unity}
+Unity, een commerciële game engine, biedt een breed scala aan functies, waaronder ondersteuning voor zowel 2D- als 3D-graphics, fysica, geluid, netwerken en augmented reality \autocite{Haas2014}.
+\subsubsection{Unity blueprints}
 
-\lipsum[7-20]
+\subsection{Godot}
+Godot, een gratis en open-source platform, biedt een combinatie van toegankelijkheid en flexibiliteit, zonder verborgen functionaliteiten achter een betaalmuur. Het heeft ook een actieve en ondersteunende gemeenschap \autocite{Bradfield2018}.
+
+\subsection{Unreal Engine 4}
+Unreal Engine 4 omvat verschillende componenten zoals sound engines, physics engines, graphics engines, gameplay frameworks en online functionaliteiten. De engine bevat ook de Unreal Editor, waarin spellen worden geprogrammeerd met modules zoals Material en Blueprint \autocite{lee2016learning}.
+
+\subsection{Buildbox}
+Buildbox is ontworpen voor het ontwikkelen van 2D-games en maakt het mogelijk om snel spellen te maken en te exporteren naar verschillende platformen, inclusief mobiele telefoons \cite{audronis2016buildbox}.
+
+\subsection{Construct 3}
+Construct 3 is een HTML5-gebaseerde 2D-game engine die visueel programmeren ondersteunt en spellen kan exporteren naar Windows, MacOS, Linux en mobiele telefoons \cite{enwiki:1200994136}.
