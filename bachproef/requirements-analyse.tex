@@ -1,0 +1,71 @@
+%%=============================================================================
+%% Methodologie
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Requirements-analyse}{Requirements-analyse}}%
+\label{ch:requirements-analyse}
+
+%% TODO: In dit hoofstuk geef je een korte toelichting over hoe je te werk bent
+%% gegaan. Verdeel je onderzoek in grote fasen, en licht in elke fase toe wat
+%% de doelstelling was, welke deliverables daar uit gekomen zijn, en welke
+%% onderzoeksmethoden je daarbij toegepast hebt. Verantwoord waarom je
+%% op deze manier te werk gegaan bent.
+%% 
+%% Voorbeelden van zulke fasen zijn: literatuurstudie, opstellen van een
+%% requirements-analyse, opstellen long-list (bij vergelijkende studie),
+%% selectie van geschikte tools (bij vergelijkende studie, "short-list"),
+%% opzetten testopstelling/PoC, uitvoeren testen en verzamelen
+%% van resultaten, analyse van resultaten, ...
+%%
+%% !!!!! LET OP !!!!!
+%%
+%% Het is uitdrukkelijk NIET de bedoeling dat je het grootste deel van de corpus
+%% van je bachelorproef in dit hoofstuk verwerkt! Dit hoofdstuk is eerder een
+%% kort overzicht van je plan van aanpak.
+%%
+%% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
+%% en geef het een gepaste titel.
+
+In overleg met AllPhi zijn de volgende use cases geformuleerd. We hanteren het MoSCoW-principe om een overzicht te verkrijgen van hoe we de use cases zullen ordenen. MoSCoW staat voor Must-haves, Should-haves, Could-haves en Mustn't-haves.
+
+\section{Functional requirements}
+\subsection{Gameplay}
+\begin{itemize}
+    \item De speler moet een ruimteschip kunnen bewegen zowel horizontaal als verticaal. 
+    \item Er moeten vijanden in “spawnen” in een formatie. 
+    \item Vijanden moeten van links naar rechts en vice versa bewegen.
+    \item Het ruimteschip moet kogels kunnen afvuren om zo vijanden te kunnen vermoorden.
+    \item Als een vijand geraakt wordt moet deze weggaan en de speler een punt krijgen. 
+    \item Als alle vijanden van een bepaald level dood zijn moet de speler naar het volgend level kunnen gaan.
+    \item Er moet een moeilijkheidsgraad dynamisch toenemen met elk level zodat de vijanden moeilijker te verslaan worden. 
+    \item De speler heeft een beperkt aantal levens. 
+    \item Als een speler geraakt wordt door een vijand moet deze een leven verliezen.
+    \item Als een speler al zijn levens verloren heeft moet het spel stoppen. 
+\end{itemize}
+
+\subsection{\IfLanguageName{dutch}{Puntensysteem}{Pointsystem}}
+\begin{itemize}
+    \item Hoe hoger de moeilijkheidsgraad hoe meer punten er verdiend worden bij het verslaan van vijanden.
+    \item Het spel moet de scores bij kunnen houden van spelers. 
+    \item Het spel moet een scorebord kunnen tonen met een ranglijst van de beste spelers. 
+\end{itemize}
+
+\subsection{Power-ups}
+\begin{itemize}
+    \item Bij het verslaan van een vijand kan het gebeuren dat deze een power-up laat vallen.
+    \item De speler kan een power-up verzamelen die het wapen kan verbeteren.
+    \item De speler kan extra levens opnemen zodat ze langer kunnen spelen.
+\end{itemize}
+
+\subsection{\IfLanguageName{dutch}{Spelmodi}{Gamemodes}}
+\begin{itemize}
+    \item Het spel heeft een single player modus.
+    \item Het spel heeft een multiplayer modus.
+\end{itemize}
+
+\section{Non-Functional requirements}
+\begin{itemize}
+    \item Het spel moet een gebruiksvriendelijke gebruikersinterface hebben. 
+    \item Het spel moet soepel kunnen draaien ookal zijn er veel vijanden op het scherm. 
+    \item Er moeten geluidseffecten toegevoegd worden bij het spel.
+\end{itemize}
