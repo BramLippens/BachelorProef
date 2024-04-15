@@ -4,14 +4,37 @@
 % Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
 % dit hoofdstuk past binnen het geheel van de bachelorproef. Geef in het
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
+In de huidige razendsnelle wereld is het een constante uitdaging om de aandacht van mensen vast te houden. Korte aandachtsspannen dwingen ons om creatiever en unieker te werk te gaan. Dit geldt ook voor bedrijven die softwareontwikkelaars willen aantrekken. Gelukkig biedt de wereld van gaming een gouden kans.
+\\
+De programmeerwereld telt een groot aantal enthousiaste gamers. Deze ontwikkelaars zijn gemotiveerd, creatief en op zoek naar nieuwe uitdagingen. Echter, niet alle bedrijven die deze doelgroep willen bereiken, beschikken over de kennis en kunde om zelf te gamen of game-engines te gebruiken.
+\\
+Game-engines bieden een unieke oplossing. Deze krachtige tools stellen ontwikkelaars in staat om boeiende en interactieve applicaties te creëren zonder diepgaande gamedesignkennis te hoeven bezitten. Met behulp van diverse tools en features stroomlijnt de ontwikkeling van prototypes, simulaties en visuele interfaces.
+
+\section{Theoretisch Kader}
+\subsection{\IfLanguageName{dutch}{Game Engine}{Game Engine}}%
+\label{sec:game-engines}
+De term "game engine" kwam op in het midden van de jaren 1990, met de opkomst van het razend populaire videospel Doom, ontwikkeld door id Software. Doom was een van de spellen die een revolutie teweegbrachten in de videogame-industrie. Het spel was opgebouwd uit twee lagen: de kernsoftwarecomponenten, zoals het renderingsysteem voor de driedimensionale omgeving, de collisiedetectie en het geluidssysteem, en de andere laag, die het ontwerp van het spel, de werelden/niveaus en de spelregels omvatte. Hierdoor kon id Software nieuwe iteraties van videospellen uitbrengen met verschillende looks, nieuwe unieke werelden en nieuwe spelregels, zonder ingrijpende aanpassingen aan de kerncomponenten te hoeven maken. Dit leidde tot de term "game engine". \cite{gregory2018game}
+
+\subsection{Scenes}%
+In de dynamische wereld van game development fungeren scenes als de fundamentele bouwstenen van een meeslepende spelomgeving. Net zoals hoofdstukken de structuur van een boek bepalen, vormen scenes de distinct afgebakende elementen die samen de unieke game-ervaring creëren. Van interactieve menu's tot uitdagende levels, cutscenes die het verhaal vertellen en boeiende interactieve omgevingen, elke scene draagt bij aan de cohesie en immersie van de game.
+
+Scenes vervullen diverse cruciale functies die de ontwikkeling en het uiteindelijke spel optimaliseren. Ze brengen orde in de complexiteit dat soms spellen hebben. Door een spel op te splitsen in verschillende scenes behouden de ontwikkelaars een helder overzicht en kunnen ze efficiënter werken. Dit vereenvoudigt het beheer van de verschillende elementen.
+
+\subsection{Sprite}
+In de dynamische wereld van computer graphics zijn sprites onmisbare elementen die leven en beweging brengen in digitale ruimtes. Deze tweedimensionale bitmapafbeeldingen, vaak met transparantie, vormen de basis voor talloze visuele effecten, van bewegende karakters in videogames tot iconen in gebruikersinterfaces.
+
+De kracht van sprites ligt in hun eenvoud en efficiëntie. Door snel opeenvolgende beelden te tonen, creëren ze de illusie van beweging en voegen ze dynamiek toe aan statische beelden. Dit maakt ze ideaal voor het weergeven van complexe elementen zonder de prestaties van computers te belasten.
+
+\subsection{\IfLanguageName{dutch}{Collisie Detectie}{Collision Detection}}
+In de dynamische wereld van videogames is Collision Detection (CD) een onmisbaar element dat realistische interacties tussen objecten mogelijk maakt. Het fungeert als de onzichtbare hand die ervoor zorgt dat spelers, vijanden, projectielen en de omgeving op een natuurlijke en geloofwaardige manier met elkaar omgaan, waardoor meeslepende en interactieve spelervaringen gecreëerd worden.
+CD detecteert wanneer twee of meer objecten in een game met elkaar in botsing komen. Dit omvat zowel statische objecten (zoals muren, vloeren en obstakels) die de grenzen van de spelwereld definiëren, als dynamische objecten (zoals de speler, vijanden en projectielen) die voortdurend in beweging zijn.
+Door deze botsingen te detecteren, kan de game op diverse manieren reageren op deze interacties, wat realistische consequenties en spannende gameplay-momenten creëert.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 \section{Low Code}
 Low-code is softwarebenadering dat bijna tot geen programmeer ervaring nodig heeft om iets te ontwikkelen. In plaats van complexe programmeer talen te leren en gebruiken, is er een visuele interface.\autocite{Kissflow2024} Met lowcode sleep je eenvoudig elementen in je werkveld en koppel je ze met elkaar. Dit maakt het ontwikkelingsproces intuïtief en meer toegankelijk. Als je op deze manier een spel zou ontwikkelen moet je dus niet de achterliggende code van de game engine leren maar alleen de interface. Hierdoor ligt je focus meer bij het ontwerpen en hoe de objecten met elkaar werken. Nog een pluspunt is dat bij gebruik van low code game engines is dat de duur om een spel te ontwikkelen lager ligt dan op de traditionele manier.
 
-\section{\IfLanguageName{dutch}{Game Engines}{Game Engines}}%
-\label{sec:game-engines}
-De term "game engine" kwam op in het midden van de jaren 1990, met de opkomst van het razend populaire videospel Doom, ontwikkeld door id Software. Doom was een van de spellen die een revolutie teweegbrachten in de videogame-industrie. Het spel was opgebouwd uit twee lagen: de kernsoftwarecomponenten, zoals het renderingsysteem voor de driedimensionale omgeving, de collisiedetectie en het geluidssysteem, en de andere laag, die het ontwerp van het spel, de werelden/niveaus en de spelregels omvatte. Hierdoor kon id Software nieuwe iteraties van videospellen uitbrengen met verschillende looks, nieuwe unieke werelden en nieuwe spelregels, zonder ingrijpende aanpassingen aan de kerncomponenten te hoeven maken. Dit leidde tot de term "game engine". \cite{gregory2018game}
+
 
 \subsection{GameMaker studio 2}
 GameMaker Studio 2, een engine die geschikt is voor beginners om 2D-games te maken, maakt gebruik van een drag-and-drop interface en vereist geen extra programmeertaal naast C\#. Het gebruikt zijn eigen taal genaamd GameMaker Language (GML). \autocite{cossu2019game}
