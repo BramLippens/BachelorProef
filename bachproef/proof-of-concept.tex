@@ -5,26 +5,19 @@
 \chapter{\IfLanguageName{dutch}{proof-of-concept}{proof-of-concept}}%
 \label{ch:proof-of-concept}
 
-%% TODO: In dit hoofstuk geef je een korte toelichting over hoe je te werk bent
-%% gegaan. Verdeel je onderzoek in grote fasen, en licht in elke fase toe wat
-%% de doelstelling was, welke deliverables daar uit gekomen zijn, en welke
-%% onderzoeksmethoden je daarbij toegepast hebt. Verantwoord waarom je
-%% op deze manier te werk gegaan bent.
-%% 
-%% Voorbeelden van zulke fasen zijn: literatuurstudie, opstellen van een
-%% requirements-analyse, opstellen long-list (bij vergelijkende studie),
-%% selectie van geschikte tools (bij vergelijkende studie, "short-list"),
-%% opzetten testopstelling/PoC, uitvoeren testen en verzamelen
-%% van resultaten, analyse van resultaten, ...
-%%
-%% !!!!! LET OP !!!!!
-%%
-%% Het is uitdrukkelijk NIET de bedoeling dat je het grootste deel van de corpus
-%% van je bachelorproef in dit hoofstuk verwerkt! Dit hoofdstuk is eerder een
-%% kort overzicht van je plan van aanpak.
-%%
-%% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
-%% en geef het een gepaste titel.
+Dit hoofdstuk omvat de proof of concept van dit onderzoek. Een van de game-engines die in de short-list zit is Godot. Met deze engine zal er een proof of concept geïmplementeerd worden.
 
-\lipsum[21-25]
+\section{Doelstelling}
+De proof of concept heeft als doelstelling een space-invaders videospel te implementeren in Godot met gebruik makend van C\# als de scripttaal voor de engine. Hierdoor weet Allphi of het mogelijk is en zouden ze het kunnen recreëren.
 
+\section{Implementatie}
+Het spel is ontwikkeld in Godot gebruikmakend van C\# als de scripttaal. Het is mogenlijk om in Godot hun eigen taal genaamd GDScript te gebruiken. Het gebruik van C\# is niet ondersteund in de script editor van Godot. Hierdoor moet je een apparte versie van Godot installeren. Eenmaal dat de engine is geinstalleerd kan je deze openen. In de instelling moet je dan selecteren welke IDE je wilt gebruiken voor het schrijven van de scripts. Hiervoor kies je het best Visual Studio. Er wordt dan een solution aangemaakt in je project waardoor je een de voordelen van C\# te gebruiken hebt. Godot heeft een goede documentatie die zowel hun eigen script als C\# ondersteund. Je kan bij de meeste stukken code verwisselen van taal.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{ImplementatieSpel.png}
+    \caption{Implementatie}
+    \label{fig:POC}
+\end{figure}
+
+\section{Conclusie}
