@@ -19,6 +19,26 @@
 %% For source code highlighting, requires pygments to be installed
 %% Compile with the -shell-escape flag!
 \usepackage[section]{minted}
+\usepackage{listings}
+
+\usepackage{xcolor}  % Optional: for color highlighting
+
+% Define the style for C# code
+\lstdefinestyle{csharp}{
+    language=[Sharp]C,         % Use the C# language
+    backgroundcolor=\color{white},  % Set background color
+    commentstyle=\color{green},     % Style for comments
+    keywordstyle=\color{blue},      % Style for keywords
+    numberstyle=\tiny\color{gray},  % Line numbers style
+    stringstyle=\color{red},        % Style for strings
+    basicstyle=\ttfamily,           % Basic font style
+    breaklines=true,                % Automatically break long lines
+    frame=single,                   % Add a frame around the code
+    tabsize=4,                      % Set the size of tabs
+    numbers=left,                   % Line numbers on the left
+    showstringspaces=false          % Don't show spaces in strings
+}
+
 %% If you compile with the make_thesis.{bat,sh} script, use the following
 %% import instead:
 %% \usepackage[section,outputdir=../output]{minted}
@@ -56,7 +76,7 @@
 \supervisor{Dhr. B. Vertonghen}
 \cosupervisor{Dhr. S. Hilleart}
 \title[]%
-    {Welke 2D game engines zijn geschikt voor programmeurs van AllPhi met een C\# achtergrond maar geen game development achtergrond om games te ontwikkelen voor evenementen?}
+    {Welke 2D game engines zijn geschikt voor een arcade spel te ontwikkelen die de taal C\# ondersteunen?}
 \academicyear{\advance\year by -1 \the\year--\advance\year by 1 \the\year}
 \examperiod{1}
 \degreesought{\IfLanguageName{dutch}{Professionele bachelor in de toegepaste informatica}{Bachelor of applied computer science}}
