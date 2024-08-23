@@ -12,7 +12,7 @@ Het spel zal de vorm aannemen van een eenvoudig videospel waarin de speler diver
 Binnen het spel zullen verschillende typen vijanden aanwezig zijn, evenals bunkers waarachter de speler dekking kan zoeken. Daarnaast zal een willekeurig gegenereerde UFO periodiek aan de linkerkant van het scherm verschijnen, waarna deze zich naar rechts beweegt terwijl er op de speler wordt geschoten. Alle vijanden kunnen worden vernietigd, wat de speler punten oplevert. De hoeveelheid punten die de speler verdient, is afhankelijk van de positie van de vijand binnen de verschillende lagen: hoe hoger de laag, des te meer punten worden toegekend.
 
 \section{Doelstelling}
-De proof of concept heeft als doelstelling een space-invaders videospel te implementeren in Godot met gebruik makend van C\# als de scripttaal voor de engine. Hierdoor weet Allphi of het mogelijk is en zouden ze het kunnen recreëren.
+De proof of concept heeft als doelstelling een space-invaders videospel te implementeren in Unity en Godot met gebruik makend van C\# als de scripttaal voor de engines. Hierdoor weet Allphi of het mogelijk is en zouden ze het kunnen recreëren.
 
 \section{Implementatie in Unity}
 \subsection{Installatie van Unity}
@@ -463,7 +463,14 @@ Voordat op build gedrukt wordt kunnen er nog player settings aangepast worden. H
     \label{fig:BuildScherm}
 \end{figure}
 Eenmaal dit allemaal gekozen is kan het spel gebuild worden. Dit opent de file explorer om een locatie te selecteren waar het spel gemaakt mag worden. Het is aangeraden om dit op te slaan in een lege map op een locatie naar keuze. Voor dit voorbeeld komt deze op het bureaublad. Als het spel heeft alles wat in deze map terecht komt nodig om het spel te kunnen spelen.
-
+\subsection{Eindresultaat}
+Het eindresultaat is te zien aan de onderstaande foto. De github repository is te vinden via deze link: \url{https://github.com/BramLippens/UnityArcadeGame}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{UnityGameFinished.png}
+    \caption{UnityGameFinished}
+    \label{fig:UnityGameFinished}
+\end{figure}
 \section{Implementatie Godot}
 Het spel is ontwikkeld in de Godot-engine met behulp van de programmeertaal C\#. Om aan de slag te gaan, dient u eerst de Godot-engine te downloaden van de officiële website. Er zijn twee verschillende versies beschikbaar. De standaardversie is geschikt indien u gebruik wilt maken van de ingebouwde scripttaal GDScript, een functionele programmeertaal. De alternatieve versie biedt ondersteuning voor C\#.
 \\
@@ -478,10 +485,283 @@ De derde en laatste optie, "Forward+", is uitsluitend geschikt voor desktop-plat
 Gezien de specifieke usecase is de "Mobile"-renderer geselecteerd voor de implementatie van het spel.
 \\
 Na het creëren van een nieuw project wordt het bovenstaande scherm gepresenteerd. Dit scherm bestaat uit verschillende panelen, elk met een specifieke functie. Aan de rechterzijde bevindt zich het scènepaneel, waarin alle nodes worden weergegeven die zich in de huidige scène bevinden. Daaronder is het assets-paneel te vinden, waar alle grafische elementen, zoals afbeeldingen en sprites, worden opgeslagen. Een node kan worden opgeslagen als een scène, waardoor deze herbruikbaar wordt en in het assets-paneel verschijnt. Aan de rechterzijde van het scherm worden de eigenschappen van de momenteel geselecteerde node getoond.
+\subsection{Installatie van Godot}
+Godot heeft geen installatie nodig. Dit is voorverpakt in een zip bestand. De gebruiker van de engine moet alleen maar deze uitpakken en de engine is klaar om te gebruiken. De download voor de engine is terug te vinden op de volgende link: “https://godotengine.org/download/windows/”.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{GodotDownload.png}
+    \caption{GodotDownload}
+    \label{fig:GodotDownload}
+\end{figure}
 
-\section{Eindresultaat}
+Om een nieuw project te starten moet je de .exe van de uitgepakte download runnen. Hiermee opent het scherm “Project Manager”. Klik hierna op create om een project aan te maken. Hierin moet de naam van het project, de plaats waar het opgeslagen moet worden en welke renderer er gebruikt moet worden gekozen. Er zijn 3 verschillende opties voor de renderer. De eerste is Forward+. Deze is voor het ontwikkelen van 3D spellen en grote complexere spellen. Voor deze casus is dit overbodig. Hierdoor wordt er gekozen om de Mobile optie. Deze werkt sneller voor simpele scenes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{CreateGodot.png}
+    \caption{CreateGodot}
+    \label{fig:CreateGodot}
+\end{figure}
+
+\subsubsection{De Godot editor}
+Nu het project is aangemaakt opent de editor. Deze is hieronder te zien.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{GodotEditor.png}
+    \caption{GodotEditor}
+    \label{fig:GodotEditor}
+\end{figure}
+Deze is onderverdeeld in verschillende schermen. Links is te zien welke nodes er gebuikt worden. Omdat in een nieuw project er nog niets van nodes zijn aangemaakt is er de optie om de initieel node aan te maken. Hieronder is alles wat in het project gebruikt wordt terug te vinden. Dit kan van assets tot herbruikbare nodes. Aan de rechterzijde is de inspector te vinden. Bij het selecteren van een node of sprite in de scene manager wordt deze aangevuld met allemaal informatie van het geselecteerde item.
+
+\subsection{Speler maken}
+Het startpunt voor het maken van de speler is bij een Area2D. Hierin komen de volgende zaken. De sprite2D is een node om een afbeelding toe te voegen aan het object. Deze moet ook een collision2D krijgen. Dit is nodig om als de vijand schiet het te herkennen. De vorm van de collision moet even groot worden als de afbeelding. Nu dit klaar staat krijgt de sprite een script. Dit kan door op het icoontje naast filter zoekbalk te klikken. Bij het aanmaken van het script moet er gekozen worden om C\# te gebruiken.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{GodotScriptMaken.png}
+    \caption{GodotScriptMaken}
+    \label{fig:GodotScriptMaken}
+\end{figure}
+In dit script zijn volgende zaken toegevoegd. De snelheid met het type float. Een richting met het type Vector2 omdat het een 2d spel is.  Het script moet ook een reverence hebben naar de collisionshape. Voor de speler te laten bewegen moet er ook de keybindings geconfigureerd worden. Dit is te vinden project -> projectsettings-> input Map. De volgende inputs moeten geconfigureerd worden. “move_left” om naar links te gaan, “move_right” om naar rechts te gaan en “shoot” om te kunnen schieten. Deze hebben we in een later stadia nodig.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{MovementSettingsGodot.png}
+    \caption{MovementSettingsGodot}
+    \label{fig:MovementSettingsGodot}
+\end{figure}
+Voor dit te laten werken is de volgende functie nodig. Deze kijkt welke input er gegeven wordt laat het schip verschuiven naar de gewenste richting.
+
+\begin{lstlisting}[style=csharp]
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
+    {
+        var input = Input.GetAxis("move_left", "move_right");
+        
+        direction = input > 0 ? Vector2.Right : input < 0 ? Vector2.Left : Vector2.Zero;
+        
+        var deltaMovement = Speed * direction.X * delta;
+        if (Position.X + deltaMovement < startBound || Position.X + deltaMovement + bounding_size_x > endBound)
+        {
+            return;
+        }
+        
+        Position +=  new Vector2((float)deltaMovement, 0);
+    }    
+\end{lstlisting}
+
+\subsection{De speler laten schieten}
+Voor de laser die geschoten wordt te creëren is een nieuwe scene nodig. Het startpunt is een area2d. Hierin komt een sprite2d. Dit is de afbeelding van de laser. De laser moet ook nog een CollisionShape2d krijgen die dezelfde grootte heeft als de afbeelding. Hierna kan het script voor de laser gemaakt worden. Dit script is redelijk eenvoudig. De laser zal constant naar boven.
+\begin{lstlisting}[style=csharp]
+    using Godot;
+    using System;
+    
+    public partial class Laser : Area2D
+    {
+        [Export]
+        private float Speed = 300;
+        // Called when the node enters the scene tree for the first time.
+        public override void _Ready()
+        {
+        }
+        
+        // Called every frame. 'delta' is the elapsed time since the previous frame.
+        public override void _Process(double delta)
+        {
+            Position -= new Vector2(0, Speed * (float)delta);
+        }
+    }    
+\end{lstlisting}
+
+Om nu de speler te laten schieten moet bij de speler node een extra node toegevoegd worden. Dit wordt het punt vanwaar de laser geschoten wordt. Om dit te laten werken krijgt dit startpunt zijn eigen script. Dit zorgt ervoor dat het overzichtelijk blijft bij het ontwikkelingsproces. Bij elke keer het shoot keybind ingedrukt wordt de laser afgeschoten. Er is in dit voorbeeld ervoor gekozen om maar 1 laser per keer op het scherm te hebben.
+
+\begin{lstlisting}[style=csharp]
+    using Godot;
+    using System;
+    
+    public partial class Shooting : Node2D
+    {
+        [Export]
+        PackedScene laserScene;
+        
+        private Laser currentLaser = null;
+        
+        public override void _Input(InputEvent @event)
+        {
+            base._Input(@event);
+            
+            if(Input.IsActionJustPressed("shoot")){
+                if(currentLaser == null){
+                    currentLaser = laserScene.Instantiate() as Laser;
+                    currentLaser.GlobalPosition = ((Node2D)GetParent()).GlobalPosition - new Vector2(0, 20);
+                    GetTree().Root.GetNode<Node>("Main").AddChild(currentLaser);
+                    currentLaser.Connect("tree_exited", new Callable(this, nameof(OnLaserExitedTree)));
+                }
+            }
+        }
+        public void OnLaserExitedTree()
+        {
+            currentLaser = null;
+        }
+    }   
+\end{lstlisting}
+Wat op te merken is dat de laser blijft bestaan. Dit is niet de bedoeling. Moest dit niet afgehandeld worden kan het performantie problemen veroorzaken. Dit kan verholpen worden door een nieuwe scene aan te maken en deze bovenaan in het speel veld te plaatsen. Deze bestaat uit een CollisionShape2D. Om dit te laten werken is een klein script nodig.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{LaserCatcher.png}
+    \caption{LaserCatcher}
+    \label{fig:LaserCatcher}
+\end{figure}
+Bij het klikken van de laserCatcher is rechts te de eigenschap Collision terug te vinden. Hiermee kan je allerlei zaken configureren zodat deze alleen met laser te laten werken. Om lagen toe te voegen moet er op de drie verticale punten gedrukt worden. Dit opent een nieuw scherm dat alle lagen weergeeft. In layer 2 voer je laser in en vink deze aan in de inspector on mask.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{MaskGodot.png}
+    \caption{MaskGodot}
+    \label{fig:MaskGodot}
+\end{figure}
+Hierdoor is er maar 1 lijntje code nodig bij het script van de laser catcher. Hierdoor worden dus de laser verwijderd bij het einde van het speelveld.
+
+\begin{lstlisting}[style=csharp]
+   using Godot;
+   using System;
+   
+   public partial class LaserCatcher : Area2D
+   {
+       public void OnAreaEntered(Area2D area)
+       {
+           area.QueueFree();
+       }
+   }
+   
+\end{lstlisting}
+
+\subsubsection{Vijanden laten spawnen}
+Om vijanden te kunnen laten verschijnen moet er eerst en vooral een startpunt geconfigureerd worden voor dit. Dit gebeurt met behulp van een node die als startpunt gebruikt wordt. 
+Voor de vijanden aan te maken is hetzelfde principe als de speler aan te maken. Eenmaal deze zijn aangemaakt kunnen we deze aanroepen in de spawner zodat deze in het spel komen te staan. Dit is het script van hoe dit in zijn werk gaat.
+\begin{lstlisting}[style=csharp]
+using Godot;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public partial class InvaderSpawner : Node2D
+{
+    const int ROWS = 5;
+    const int COLUMNS = 11;
+    const int HORIZONTAL_SPACING = 32;
+    const int VERTICAL_SPACING = 32;
+    const int INVADER_HEIGHT = 24;
+    const int START_Y_POSITION = -50;
+    const int INVADERS_POSITION_X_INCREMENT = 10;
+    const int INVADERS_POSITION_Y_INCREMENT = 20;
+    
+    int movement_direction = 1;
+    
+    public PackedScene InvaderScene { get; set; }
+    
+    public PackedScene InvaderShotScene { get; set; }
+    public Timer MovementTimer { get; set; }
+    public Timer ShotTimer { get; set; }
+    
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        InvaderConfig invader1Res = ResourceLoader.Load("res://Resources/Invader1.tres") as InvaderConfig;
+        InvaderConfig invader2Res = ResourceLoader.Load("res://Resources/Invader2.tres") as InvaderConfig;
+        InvaderConfig invader3Res = ResourceLoader.Load("res://Resources/Invader3.tres") as InvaderConfig;
+        InvaderScene = GD.Load<PackedScene>("res://Scenes/Invader/Invader.tscn");
+        InvaderShotScene = GD.Load<PackedScene>("res://Scenes/Invader/InvaderShot.tscn");
+        MovementTimer = GetNode<Timer>("MovementTimer");
+        MovementTimer.Connect("timeout", new Callable(this,nameof(MoveInvaders)));
+        
+        ShotTimer = GetNode<Timer>("ShotTimer");
+        ShotTimer.Connect("timeout", new Callable(this, nameof(OnInvaderShot)));
+        
+        
+        InvaderConfig invaderConfig;
+        for(int row = 0; row < ROWS; row++)
+        {
+            if (row == 0 || row == 1)
+            {
+                invaderConfig = invader1Res;
+            }
+            else if (row == 2 || row == 3)
+            
+            {
+                invaderConfig = invader2Res;
+            }
+            else
+            {
+                invaderConfig = invader3Res;
+            }
+            
+            var rowWidth = (COLUMNS * invaderConfig.Width * 3) + (COLUMNS - 1) * HORIZONTAL_SPACING;
+            var startX = (Position.X - rowWidth) / 2;
+            
+            for (int column = 0; column < COLUMNS - 1; column++)
+            {
+                var x = startX + (column * invaderConfig.Width * 3) + (column * HORIZONTAL_SPACING);
+                var y = START_Y_POSITION + (row * INVADER_HEIGHT) + (row * VERTICAL_SPACING);
+                var spawnPosition = new Vector2(x, y);
+                
+                SpawnInvader(invaderConfig, spawnPosition);
+            }
+        }
+    }
+    
+    private void MoveInvaders()
+    {
+        Position = Position with { X = Position.X + (movement_direction * INVADERS_POSITION_X_INCREMENT) };
+    }
+    
+    private void SpawnInvader(InvaderConfig invaderConfig, Vector2 spawnPosition)
+    {
+        // REMBER
+        Invader invader = InvaderScene.Instantiate() as Invader;
+        
+        invader.Config = invaderConfig;
+        invader.GlobalPosition = spawnPosition;
+        AddChild(invader);
+    }
+    
+    public void OnRightWallAreaEntered(Area2D area)
+    {
+        if (movement_direction == 1)
+        {
+            Position = Position with { Y = Position.Y + INVADERS_POSITION_Y_INCREMENT };
+            movement_direction = -1;
+        }
+    }
+    public void OnLeftWallAreaEntered(Area2D area)
+    {
+        if (movement_direction == -1)
+        {
+            Position = Position with { Y = Position.Y + INVADERS_POSITION_Y_INCREMENT };
+            movement_direction = 1;
+        }
+    }
+    public void OnBottomWallAreaEntered(Area2D area)
+    {
+        GD.Print("Right Wall");
+    }
+    
+    public void OnInvaderShot()
+    {
+        List<Invader> invaders = GetChildren().Where(x => x is Invader).Cast<Invader>().ToList();
+        // get random invader
+        Invader randomInvader = invaders[GD.RandRange(0, invaders.Count)-1];
+        
+        var invaderShot = InvaderShotScene.Instantiate() as InvaderShot;
+        invaderShot.GlobalPosition = randomInvader.GlobalPosition;
+        
+        GetTree().Root.AddChild(invaderShot);
+    }
+}
+
+\end{lstlisting}
+Om de vijand te laten verdwijnen eenmaal deze beschoten wordt kan dit via een extra functie te schrijven bij de vijand hun script. Dit is de onAreaEntered(Area2D area). Deze kan herkennen of het een laser is dat in contact kwam met het schip of niet. Is dit zo dan wordt de vijand verwijderd.
+\subsection{Eindresultaat}
 Het eindresultaat is te zien aan de onderstaande foto. De github repository is te vinden via deze link: \url{https://github.com/BramLippens/Godot-CSharp-Space-Invaders}
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{ImplementatieSpel.png}
     \caption{Implementatie}

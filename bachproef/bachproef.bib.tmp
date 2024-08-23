@@ -1,0 +1,248 @@
+% Encoding: UTF-8
+
+@book{Knuth1998,
+ author = {Knuth, Donald E.},
+ title = {The art of computer programming,  volume 3: (2nd ed.) sorting and searching},
+ year = {1998},
+ publisher = {Addison Wesley Longman Publishing Co., Inc.},
+ address = {Redwood City, CA, USA}
+}
+
+@book{Pollefliet2011,
+  author = {Pollefliet, Leen},
+  title = {Schrijven van verslag tot eindwerk: do's en don'ts},
+  year = {2011},
+  publisher = {Academia Press},
+  address = {Gent}
+}
+
+@article{Creeger2009,
+  author = {Creeger, Mache},
+  journal = {Communications of the ACM},
+  number = {8},
+  pages = {50--56},
+  title = {{CTO Roundtable: Cloud Computing}},
+  volume = {52},
+  year = {2009}
+}
+
+@Thesis{Barczak2021,
+  author      = {Barczak , Andrzej Marian and Woźniak, Hubert},
+  date        = {2021-10-22},
+  institution = {University of Siedlce},
+  title       = {Comparative study on game engines},
+  type        = {resreport},
+  abstract    = {Game engines are platforms that make it easier to create computer games. They allow you to integrate and combine into single unit individual game elements such as animations, interaction with the user, or detection of collisions between objects. Game engine is a software that facilitates the production of games for platforms such as desktops, consoles, and mobile devices [1]. In addition to specialized editors, game engines provide ready-made functionalities that can be used by users. A great advantage of using the game engine is the possibility of their reuse. Game engines are an example of software isolating rigid logic and game rules, from easily modifiable and expandable components, which can be used repeatedly in a way that does not require great modifications. This article is an attempt to perform a comparative analysis of three engines to create games: CryEngine, Unreal Engine, and Unity. The criteria for comparison will be technical capabilities and factors influencing the popularity and acceptance of engines by users. The aim of this article is to show the strengths and weaknesses of engines and to present the differences between these tools.},
+  ranking     = {rank4},
+}
+
+@Thesis{Hussain2020,
+  author      = {Afzal Hussain, Haad Shakeel, Faizan Hussain, Nasir Uddin,Turab Latif Ghouri},
+  date        = {2020-08},
+  institution = {University of Sindh Journal of Information and Communication Technology},
+  title       = {Unity Game Development Engine: A Technical Survey},
+  type        = {techreport},
+  abstract    = {Paper aims to develop relevant understanding and knowledge about the Unity game development engine 
+for the better conception of the people allied with the IT sector. The main audience targeted in this paper are those 
+who are from a non-technical and technical background and due to the augmentation of technology, they want to 
+pursue their careers in game development. Moreover, in this paper, qualitative research methods have been adopted. 
+It is found that Unity is a smart and active game development platform that is playing an operative role nowadays. 
+Different industries are inspired by Unity that may impact positively such as in career growth, job opportunities, 
+and in other regards. Unity comes with many benefits; it is an easy and simple platform to learn game development 
+and is a powerful tool that is preferred by professionals.},
+  ranking     = {rank3},
+}
+
+@Thesis{Gustafsson2020,
+  author      = {Micaela Gustafsson and Rasmus Flomen},
+  date        = {2020-05-18},
+  institution = {Blekinge Institute of Technology},
+  title       = {Game developer experience: A cognitive task analysis with different game engines},
+  type        = {techreport},
+  abstract    = {Context: Today there are a lot of different kinds of game engines to choose from, but is
+one of these engines more suitable for a developer with a beginners’ experience in game
+development?
+Objective: This is something we explore in order to help teachers choose a suitable engine for teaching game development to beginners. In this study, two teams of two persons
+each compare two of these engines, Godot and Unity.
+Method: We conducted a study, consisting of six iterations, to observe the development
+of a prototype game using the two engines. We collected data during the development
+of the game using a think-aloud protocol and a questionnaire, and after the development
+using a questionnaire that included the SUS scale for assessing the overall usability of the
+game engines.
+Results: The Godot engine have been focused on completing their documentation and
+the documentation is somewhat directed to more experienced developers. In comparison
+the Unity engine got more solutions outside of the documentation and also got their own
+special guides towards beginners.
+Although Godot engine got a more simpler GUI which will be easier at first but as the
+tasks became more difficult this became more of a disadvantage and some solutions were
+not found easily among the documentation. In comparison the Unity engine got more
+menus and can seem a lot to a beginner but became to be more helpful the harder the
+tasks became and even though most solutions were not found among the documentation,
+there were enough information from other sources to solve all problems with an easy
+search.
+Neither of the engines provided with a lot of helpful information within the tool, although
+the Godot engine had some cases where the tool would let the developers know a certain
+component was needed.
+Conclusion: Our main conclusion is that Godot is a good entry point into game development but as the tasks gets more difficult students would need the teacher’s help in order
+to solve the tasks as easy as with Unity. In contrast, Unity starts more difficult but as
+tasks gets more difficult Unity have more solutions online, which makes it more suitable
+if students are to develop on their own.
+This study is rather small with only four participants and this limits the results, for future
+studies it would be best to have more participants},
+  keywords    = {Cognitive task analysis, game developer experience, Godot, Unity, game engine, usability},
+}
+
+@Thesis{Haas2014,
+  author      = {Haas, John K.},
+  date        = {2014-03},
+  institution = {Worcester Polytechnic Institute},
+  title       = {A History of the Unity Game Engine},
+  type        = {techreport},
+  abstract    = {Unity (commonly known as Unity3D) is a game engine and integrated development
+environment (IDE) for creating interactive media, typically video games. As CEO David
+Helgason put it, Unity “is a toolset used to build games, and it’s the technology that executes the
+graphics, the audio, the physics, the interactions, [and] the networking.” [1] Unity is famous for
+its fast prototyping capabilities and large number of publishing targets.
+The first version of Unity (1.0.0) was created by colleagues: David Helgason, Joachim
+Ante and Nicholas Francis in Denmark. [1] The initial product launched on June 6, 2005. [2] The
+goal was to create an affordable game engine with professional tools for amateur game
+developers while “democratize[ing the] game development” industry.[3] The three were inspired
+by the easy workflow, simple asset pipeline, and drag-and-drop interface of Apple’s Final Cut
+Pro product.[1] When originally released, Unity was available solely for Mac OS X, and
+developers could only deploy their creations to a few platforms. The current version (4.3.1 as of
+this writing) is supported on both Windows and Mac OS X, and offers at least a dozen target
+platforms. Publishing 64-bit executables has been possible in Unity for a long time, but a 64-bit
+version of the Editor is not yet available, though highly anticipated from the development
+community.},
+  keywords    = {Unity},
+}
+
+@Book{Bradfield2018,
+  author    = {Bradfield, Chris},
+  date      = {2018-06},
+  title     = {Godot Engine Game Development Projects},
+  isbn      = {978-1-78883-150-5},
+  publisher = {Packt Publishing},
+}
+
+@article{cossu2019game,
+  title={Game Development With Game Maker Studio 2},
+  author={Cossu, Sebastiano M},
+  journal={London: Apress Media LLC},
+  year={2019},
+  publisher={Springer}
+}
+
+@Book{lee2016learning,
+  author    = {Lee, Joanna},
+  title     = {Learning unreal engine game development},
+  publisher = {Packt Publishing Ltd},
+  year      = {2016},
+}
+
+@Book{audronis2016buildbox,
+  author    = {Audronis, Ty},
+  title     = {Buildbox 2. x Game Development},
+  publisher = {Packt Publishing Ltd},
+  year      = {2016},
+}
+
+@Misc{enwiki:1200994136,
+  author       = {{Wikipedia contributors}},
+  title        = {Construct (game engine) --- {Wikipedia}{,} The Free Encyclopedia},
+  howpublished = {\url{https://en.wikipedia.org/w/index.php?title=Construct_(game_engine)&oldid=1200994136}},
+  note         = {[Online; accessed 15-February-2024]},
+  year         = {2024},
+}
+
+@Article{gregory2018game,
+  author    = {Gregory, Jason},
+  title     = {Game engine architecture},
+  publisher = {AK Peters/CRC Press},
+  year      = {2018},
+}
+
+@Book{romero2019blueprints,
+  author    = {Romero, Marcos and Sewell, Brenden},
+  title     = {Blueprints visual scripting for Unreal engine: The faster way to build games using UE4 blueprints},
+  publisher = {Packt Publishing Ltd},
+  year      = {2019},
+}
+
+@Article{mohd2023analyzing,
+  author  = {Mohd, Tauheed Khan and Bravo-Garcia, Fernando and Love, Landen and Gujadhur, Mansi and Nyadu, Jason},
+  title   = {Analyzing strengths and weaknesses of Modern Game Engines},
+  number  = {1},
+  pages   = {54--60},
+  volume  = {15},
+  journal = {International Journal of Computer Theory and Engineering},
+  year    = {2023},
+}
+
+@Article{Kissflow2024,
+  author  = {Team Kissflow},
+  date    = {2024-03-12},
+  title   = {Low-Code Technology - An Ultimate Guide to Low-Code Development},
+  url     = {Low-Code Technology - An Ultimate Guide to Low-Code Development},
+  urldate = {2024-03-24},
+}
+
+@Article{kuhn2009decrypting,
+  author  = {Kuhn, Janet},
+  title   = {Decrypting the MoSCoW analysis},
+  volume  = {5},
+  journal = {The workable, practical guide to Do IT Yourself},
+  year    = {2009},
+}
+
+@Misc{flomen2020game,
+  author = {Flom{\'e}n, Rasmus and Gustafsson, Micaela},
+  title  = {Game developer experience: A cognitive task analysis with different game engines},
+  year   = {2020},
+}
+
+@Article{Trigo2022,
+  author  = {Trigo, Antonio and Varajão, João and Almeida, Miguel},
+  title   = {Low-Code Versus Code-Based Software Development: Which Wins the Productivity Game?},
+  doi     = {10.1109/MITP.2022.3189880},
+  pages   = {61-68},
+  volume  = {24},
+  journal = {IT Professional},
+  month   = {12},
+  year    = {2022},
+}
+
+@WWW{Gervraud2020,
+  author = {Thomas Gervraud},
+  date   = {2020},
+  title  = {Best 2D Game Engines: The Complete List (2020)},
+  url    = {https://thomasgervraud.com/best-2d-game-engine/},
+}
+
+@Article{sevin2016playing,
+  author    = {Sevin, Rebecca and DeCamp, Whitney},
+  title     = {From playing to programming: The effect of video game play on confidence with computers and an interest in computer science},
+  number    = {3},
+  pages     = {14--23},
+  volume    = {21},
+  journal   = {Sociological research online},
+  publisher = {SAGE Publications Sage UK: London, England},
+  year      = {2016},
+}
+
+@Online{Sibony2024,
+  author = {Joseph Sibony},
+  date   = {2024-04-24},
+  title  = {The Best Game Engines You Should Consider for 2024},
+  url    = {https://www.incredibuild.com/blog/top-gaming-engines-you-should-consider},
+}
+
+@WWW{GameRant2024,
+  author = {GameRant},
+  date   = {2024-05-23},
+  editor = {Ritwik Mitra},
+  title  = {17 Best Video Game Engines, Ranked},
+  url    = {https://gamerant.com/best-video-game-engines/},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
